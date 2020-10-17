@@ -14,13 +14,17 @@ import com.example.demo.model.PropertyModel;
 import com.example.demo.model.SheetModel;
 import com.example.demo.service.PropertyService;
 
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
+@Api(value = "Property Controller")
 @RestController
 @CrossOrigin(origins = "http://localhost:4200")
 public class PropertyController {
 
 	@Autowired
 	PropertyService propertyService;
-
+	
+	@ApiOperation(value="Returns list of PropertyModel")
 	@PostMapping("/properties")
 	public ResponseEntity<List<PropertyModel>> postExcelData(@RequestBody SheetModel mode) throws Exception{
 		propertyService.postExcelData(mode);
