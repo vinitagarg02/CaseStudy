@@ -1,14 +1,12 @@
 package com.example.demo.model;
 
-
-
 import java.time.LocalDate;
-
 import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiModelProperty;
+
 @Api(value = "Property Model")
 public class PropertyModel {
 	@JsonProperty("Id")
@@ -36,7 +34,7 @@ public class PropertyModel {
 	}
 
 	@JsonProperty("DOB")
-	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern="MM/dd/yyyy")
+	@JsonFormat(shape = JsonFormat.Shape.STRING, pattern = "MM/dd/yyyy")
 	public LocalDate dob;
 	@JsonProperty("Prop Address")
 	public String address;

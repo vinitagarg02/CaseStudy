@@ -6,8 +6,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 
 public class SheetModel {
 
-
-    @JsonProperty("Sheet1")
-    public List<PropertyModel> props;
+	@JsonProperty("Sheet1")
+	public List<PropertyModel> props;
 
 }
